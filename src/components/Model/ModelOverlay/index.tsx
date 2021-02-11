@@ -1,12 +1,19 @@
 import React from 'react';
 
+import { CarModel } from '../ModelsContext';
+import useWrapperScroll from '../useWrapperScroll';
+
 import { Container } from './styles';
 
-const ModelOverlay: React.FC = ({children}) => {
+interface Props {
+  model: CarModel
+}
+
+const ModelOverlay: React.FC<Props> = ({ model, children }) => {
+  const { scrollY } = useWrapperScroll()
+
   return (
-    <Container>
-      {children}
-    </Container>
+    <Container>{children}</Container>
   );
 }
 
