@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ModelSection, ModelsWrapper } from '../Model';
 import DefaultOverlayContent from '../DefaultOverlayContent';
+import UniqueOverlay from '../UniqueOverlay';
 
 import { Container } from './styles';
 
@@ -12,13 +13,13 @@ const Page: React.FC = () => {
       <ModelsWrapper>
         <div>
           {[
-            'Model One',
-            'Model Two',
-            'Model Three',
-            'Model Four',
-            'Model Five',
-            'Model Six',
-            'Model Seven',
+            'Model S',
+            'Model Y',
+            'Model 3',
+            'Model X',
+            'Lowest Cost Solar Panels in America',
+            'Solar for New Roofs',
+            'Acessories',
           ].map(modelName => (
             <ModelSection 
             key={modelName} // Todo elemento usando map precisa de key
@@ -34,6 +35,8 @@ const Page: React.FC = () => {
           ))}
 
         </div>
+
+        <UniqueOverlay />
       </ModelsWrapper>
     </Container>
   );
